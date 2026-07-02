@@ -208,7 +208,7 @@ class _HomeContentState extends State<HomeContent> {
                 ),
                 SizedBox(height: 8),
                 Text(
-                  '📦 Cartón • 🍷 Vidrio • 🔩 Metal\n📄 Papel • 🥤 Plástico • 🗑️ Basura',
+                  '📦 Cartón • 🍷 Vidrio • 🔩 Metal\n📄 Papel • 🥤 Plástico',
                   style: TextStyle(
                     fontSize: 14,
                     color: Colors.white70,

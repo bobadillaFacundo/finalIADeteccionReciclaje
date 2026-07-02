@@ -6,7 +6,6 @@ enum WasteCategory {
   metal,
   paper,
   plastic,
-  trash,
 }
 
 class WasteItem {
@@ -73,15 +72,6 @@ class WasteItem {
           recyclingTip: 'Revisa el código de reciclaje (1-7). Limpia los envases antes de reciclar. Reduce el uso de plásticos de un solo uso.',
           icon: '🥤',
         );
-      case WasteCategory.trash:
-        return WasteItem(
-          category: category,
-          confidence: confidence,
-          name: 'Basura',
-          description: 'Material no reciclable',
-          recyclingTip: 'Este material no es reciclable. Considera reducir el consumo o buscar alternativas más sostenibles. Deposítalo en el contenedor de basura general.',
-          icon: '🗑️',
-        );
     }
   }
 
@@ -97,8 +87,6 @@ class WasteItem {
         return Colors.lightBlue;
       case WasteCategory.plastic:
         return Colors.orange;
-      case WasteCategory.trash:
-        return Colors.red;
     }
   }
 

@@ -195,94 +195,49 @@ class ResultScreen extends StatelessWidget {
               const SizedBox(height: 24),
 
               // Información adicional
-              if (wasteItem.category != WasteCategory.trash)
-                Container(
-                  width: double.infinity,
-                  padding: const EdgeInsets.all(20),
-                  decoration: BoxDecoration(
-                    color: Colors.green.withOpacity(0.1),
-                    borderRadius: BorderRadius.circular(16),
-                    border: Border.all(
-                      color: Colors.green,
-                      width: 2,
-                    ),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        children: [
-                          Icon(
-                            Icons.eco,
-                            color: Colors.green,
-                            size: 28,
-                          ),
-                          const SizedBox(width: 12),
-                          const Text(
-                            '¡Buen trabajo!',
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.green,
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 8),
-                      const Text(
-                        'Este material es reciclable. Asegúrate de depositarlo en el contenedor correcto para contribuir al cuidado del medio ambiente.',
-                        style: TextStyle(
-                          fontSize: 14,
-                          height: 1.4,
-                        ),
-                      ),
-                    ],
-                  ),
-                )
-              else
-                Container(
-                  width: double.infinity,
-                  padding: const EdgeInsets.all(20),
-                  decoration: BoxDecoration(
-                    color: Colors.orange.withOpacity(0.1),
-                    borderRadius: BorderRadius.circular(16),
-                    border: Border.all(
-                      color: Colors.orange,
-                      width: 2,
-                    ),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        children: [
-                          Icon(
-                            Icons.info,
-                            color: Colors.orange,
-                            size: 28,
-                          ),
-                          const SizedBox(width: 12),
-                          const Text(
-                            'Información',
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.orange,
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 8),
-                      const Text(
-                        'Este material no es reciclable. Considera reducir el consumo de este tipo de productos o buscar alternativas más sostenibles.',
-                        style: TextStyle(
-                          fontSize: 14,
-                          height: 1.4,
-                        ),
-                      ),
-                    ],
+              Container(
+                width: double.infinity,
+                padding: const EdgeInsets.all(20),
+                decoration: BoxDecoration(
+                  color: Colors.green.withOpacity(0.1),
+                  borderRadius: BorderRadius.circular(16),
+                  border: Border.all(
+                    color: Colors.green,
+                    width: 2,
                   ),
                 ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.eco,
+                          color: Colors.green,
+                          size: 28,
+                        ),
+                        const SizedBox(width: 12),
+                        const Text(
+                          '¡Buen trabajo!',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.green,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 8),
+                    const Text(
+                      'Este material es reciclable. Asegúrate de depositarlo en el contenedor correcto para contribuir al cuidado del medio ambiente.',
+                      style: TextStyle(
+                        fontSize: 14,
+                        height: 1.4,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
               const SizedBox(height: 24),
 
               // Botón para nueva clasificación

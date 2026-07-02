@@ -4,11 +4,11 @@ import 'package:image/image.dart' as img;
 import '../models/waste_item.dart';
 
 class ClassificationService {
-  static const _inputSize = 128;
+  static const _inputSize = 300;
   static const _normFactor = 127.5;
   static const List<String> _labels = [
     'cardboard', 'glass', 'metal',
-    'paper', 'plastic', 'trash',
+    'paper', 'plastic',
   ];
 
   Interpreter? _interpreter;
@@ -29,7 +29,7 @@ class ClassificationService {
     await initialize();
     if (_interpreter == null) return _simulateClassification();
 
-    // 1) Decodificar y redimensionar a 128×128
+    // 1) Decodificar y redimensionar a 224×224
     final bytes = await file.readAsBytes();
     final src = img.decodeImage(bytes);
     if (src == null) {
@@ -37,7 +37,7 @@ class ClassificationService {
     }
     final image = img.copyResize(src, width: _inputSize, height: _inputSize);
 
-    // 2) Crear tensor de entrada [1,128,128,3] con rango [0,255]
+    // 2) Crear tensor de entrada [1,224,224,3] con rango [0,255]
     final input = List.generate(_inputSize, (y) =>
       List.generate(_inputSize, (x) {
         final p = image.getPixel(x, y);
